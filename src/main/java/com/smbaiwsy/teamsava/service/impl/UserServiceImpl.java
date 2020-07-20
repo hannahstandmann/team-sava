@@ -6,12 +6,12 @@
 package com.smbaiwsy.teamsava.service.impl;
 
 import com.mongodb.MongoException;
-import org.springframework.data.domain.Sort;
 import com.smbaiwsy.teamsava.document.User;
 import com.smbaiwsy.teamsava.dto.SortOrder;
 import com.smbaiwsy.teamsava.dto.UserDto;
 import com.smbaiwsy.teamsava.repository.UserRepository;
 import com.smbaiwsy.teamsava.service.UserService;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
@@ -53,6 +53,7 @@ public class UserServiceImpl implements UserService {
                                 .firstName(userDTO.getFirstName())
                                 .surname(userDTO.getSurname())
                                 .birthday(userDTO.getBirthday())
+                                .creationDate(LocalDate.now())
                                 .build()));
 
     }

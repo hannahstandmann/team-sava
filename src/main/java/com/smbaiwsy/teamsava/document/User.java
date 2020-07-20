@@ -6,7 +6,6 @@
 package com.smbaiwsy.teamsava.document;
 
 import java.time.LocalDate;
-import java.util.UUID;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;

@@ -9,6 +9,7 @@ import com.mongodb.MongoException;
 import com.smbaiwsy.teamsava.document.User;
 import com.smbaiwsy.teamsava.dto.SortOrder;
 import com.smbaiwsy.teamsava.dto.UserDto;
+import com.smbaiwsy.teamsava.exception.UserNotFoundException;
 import com.smbaiwsy.teamsava.repository.UserRepository;
 import com.smbaiwsy.teamsava.service.UserService;
 import java.time.LocalDate;
@@ -41,7 +42,7 @@ public class UserServiceImpl implements UserService {
         if (userRepository.findById(id).isPresent()) {
             return UserMapper.fromUser(userRepository.findById(id).get());
         } else {
-            throw new MongoException("Record not Found");
+            throw new UserNotFoundException("NOT_FOUND","Record not Found");
         }
     }
 

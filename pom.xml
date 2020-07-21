@@ -12,7 +12,13 @@
     <artifactId>team-sava</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>team-sava</name>
-    <description>Demo project for Spring Boot</description>
+    <description>The app should handle 3 HTTP requests, in accordance with REST standards:
+1. Getting user’s details by its id.
+2. Getting all users’ details (possibly sorted by their birth year). 
+3. Adding a new user to the system.
+
+The first app - the user service - will fetch and manage the data.
+Its code should expose a contract (SDK) that allows any other Java app to depend on it.</description>
 
     <properties>
         <java.version>11</java.version>
